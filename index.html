@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        body{
+            background-image: url(imgs/Design\ sem\ nome.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            display:flex;
+            height: 100vh;
+            width: 100vw;
+            justify-content: left;
+            align-items: center;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .formulario{
+            margin-left: 200px;
+            width: 360px;
+            height: 360px;
+            background-color: #993be6;
+            border-radius: 5px;
+            padding: 20px;
+            color: #fff;
+            text-shadow: 5px 5px 10px #00000091;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 30px;
+        }
+        .formulario h1{
+            margin-bottom: 20px;
+        }
+        input{
+            border-radius: 8px;
+            height: 30px;
+            width: 200px;
+            border: gray 1px solid;
+
+        }
+        button{
+            background-color: #810bd2;
+            color: #e5ddee;
+            font-weight: 700;
+            width: 150px;
+            height: 40px;
+            border: solid 1px rgb(123, 112, 128);
+            border-radius: 5px;
+            transition: ease .3s;
+            font-size: 1.1em;
+        }
+        button:hover{
+            height: 45px;
+            width: 158px;
+            box-shadow: 1px 1px 3px black;
+        }
+        button:active{
+            scale: 0.9;
+        }
+    </style>
+    <link rel="shortcut icon" href="imgs/Nubank-Nuovo-Logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+</head>
+<body>
+    
+    <div class="formulario">
+        <h1>Verificação de idade</h1>
+        <p>Por favor, insira a sua idade:</p>
+        <input type="number" name="" id="idadeInput">
+        <button onclick="verificarIdade()">Verificar</button>
+    </div>
+
+    <script>
+        alert("Este site não é oficial!");
+
+        function verificarIdade(){
+            var idade = parseInt(document.getElementById('idadeInput').value);
+
+            if (idade >= 18) {
+                window.location.href = "maior.html";
+            } else{
+                window.location.href = "menor.html";
+            }
+        };
+
+    </script>
+        
+</body>
+</html>
